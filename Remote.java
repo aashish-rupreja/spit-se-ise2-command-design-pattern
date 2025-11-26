@@ -22,15 +22,15 @@ public class Remote {
   }
 
   public void setCommand(int slotNo, Command onCommand, Command offCommand) {
-    onCommands[slotNo] = onCommand;
-    offCommands[slotNo] = offCommand;
+    onCommands[slotNo-1] = onCommand;
+    offCommands[slotNo-1] = offCommand;
   }
 
   public void pressOnButton(int slotNo) {
-    onCommands[slotNo].execute();
+    onCommands[slotNo-1].execute();
   }
 
   public void pressOffButton(int slotNo) {
-    offCommands[slotNo].execute();
+    offCommands[slotNo-1].execute();
   }
 }

@@ -11,8 +11,8 @@ public class Main {
         TVSwitchOnCommand tvOnCommand = new TVSwitchOnCommand(tv);
         TVSwitchOffCommand tvOffCommand = new TVSwitchOffCommand(tv);
 
-        remote.setCommand(0, tvOnCommand, tvOffCommand);
-        remote.pressOnButton(0);
-        remote.pressOffButton(0);
+        remote.setCommand(1, tvOnCommand, tvOffCommand);
+        remote.pressOnButton(1);
+        remote.pressOffButton(1);
     }
 }
