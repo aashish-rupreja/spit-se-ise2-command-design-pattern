@@ -20,4 +20,8 @@ public class TVSwitchOffCommand implements Command {
     public void execute() {
         this.tv.switchOff();
     }
+
+    public void undo() {
+        this.tv.switchOn();
+    }
 }

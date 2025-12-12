@@ -18,6 +18,7 @@ public class Main {
         remote.setCommand(1, tvOnCommand, tvOffCommand);
         remote.pressOnButton(1);
         remote.pressOffButton(1);
+        remote.pressUndoButton();
 
         remote.setCommand(2, lightOnCommand, lightOffCommand);
         remote.pressOnButton(2);

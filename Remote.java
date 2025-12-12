@@ -9,6 +9,7 @@ public class Remote {
 
   private Command[] onCommands;
   private Command[] offCommands;
+  private Command prevCommand;
 
   public Remote(int noOfSlots) {
     onCommands = new Command[noOfSlots];
@@ -28,9 +29,15 @@ public class Remote {
 
   public void pressOnButton(int slotNo) {
     onCommands[slotNo-1].execute();
+    prevCommand = onCommands[slotNo-1];
   }
 
   public void pressOffButton(int slotNo) {
     offCommands[slotNo-1].execute();
+    prevCommand = offCommands[slotNo-1];
+  }
+
+  public void pressUndoButton() {
+    prevCommand.undo();
   }
 }
