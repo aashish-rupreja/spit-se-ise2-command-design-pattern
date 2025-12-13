@@ -29,11 +29,15 @@ public class AC {
   }
 
   public void incrementTemperature() {
+    System.out.println("Current temperature: "+this.temperature);
     this.temperature++;
+    System.out.println("Increased to: "+this.temperature);
   }
 
   public void decrementTemperature() {
+    System.out.println("Current temperature: "+this.temperature);
     this.temperature--;
+    System.out.println("Decreased to: "+this.temperature);
   }
 
   public void switchOn() {
