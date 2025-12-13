@@ -14,13 +14,13 @@ public class Main {
         LightOnCommand lightOnCommand = new LightOnCommand(hallRoomLight);
         LightOffCommand lightOffCommand = new LightOffCommand(hallRoomLight);
 
-        Remote remote = new Remote(2);
-        remote.setCommand(1, tvOnCommand, tvOffCommand);
+        Remote remote = new Remote(3, 0);
+        remote.setOnOffCommand(1, tvOnCommand, tvOffCommand);
         remote.pressOnButton(1);
         remote.pressOffButton(1);
         remote.pressUndoButton();
 
-        remote.setCommand(2, lightOnCommand, lightOffCommand);
+        remote.setOnOffCommand(2, lightOnCommand, lightOffCommand);
         remote.pressOnButton(2);
         remote.pressOffButton(2);
     }
